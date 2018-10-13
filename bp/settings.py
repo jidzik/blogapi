@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'rest_auth',
     'rest_auth.registration',
-
+    'rest_framework_swagger',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,3 +144,10 @@ STATIC_URL = '/static/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
 
 SITE_ID = 1
+
+
+SWAGGER_SETTINGS = {
+   'lOGIN_URL': 'rest_framework:login',
+   'lOGOUT_URL': 'rest_framework:logout',
+
+}
