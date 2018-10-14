@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'djng',
     'rest_auth',
     'rest_auth.registration',
     'rest_framework_swagger',
@@ -137,8 +138,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/node_modules/angular/'
 
+STATIC_ROOT = '/node_modules/angular/'
+
+STATICFILES_DIRS = [
+    ('node_modules', os.path.join(BASE_DIR, 'node_modules')),
+]
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 

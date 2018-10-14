@@ -37,4 +37,6 @@ urlpatterns = [
     path('api/v1/ra/reg/', include('rest_auth.registration.urls')),
     path('docs/', include_docs_urls(title=API_TITLE, description=API_DESCRIPTION)),
     path('sw/', schema_view),
+    path('', include('posts.urls')),
+
 ]
